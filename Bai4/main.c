@@ -10,7 +10,10 @@
 #include <stdint.h>
 #include <stdlib.h>
 
-
+/*
+* Function: printNum
+* Description: in từ tương ứng với một số (từ 0 đến 9).
+*/
 void printNum(int num, uint8_t soLuong){
     switch (num)
     {
@@ -52,7 +55,10 @@ void printNum(int num, uint8_t soLuong){
     }
 }
 
-
+/*
+* Function: tachSo
+* Description: Tách số
+*/
 void tachSo(uint32_t n){
 
     uint8_t size = 1;
@@ -66,10 +72,6 @@ void tachSo(uint32_t n){
         realloc(ptr, size*sizeof(uint8_t));
     }
 
-
-
-    //doc
-    //printf("%d",size);
     uint8_t soLuong = size;
     for(int i = size - 1  ; i >= 0 ; i--){
         
@@ -105,7 +107,5 @@ int main(int argc, char const *argv[])
     scanf("%d", &n);
     
     tachSo(n);
-
-
     return 0;
 }
