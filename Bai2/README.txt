@@ -2,5 +2,10 @@ Có 1 chuỗi như sau: "I think we showed in the past we can bounce really quic
 Câu 1: Đảo chuỗi 
 Câu 2: Tìm kiếm từ đó xuất hiện bao nhiêu lần trong chuỗi.
 
-Ý tưởng:
-    Tách các từ có trong xâu -> Lưu vào mảng -> Đảo mảng
+/*
+ý tưởng:
+    1. tạo 1 struct lưu địa chỉ đầu tiên của từ và chiều dài của từ
+    2. lưu nó vào 1 mảng 
+    3. duyệt mảng vừa tạo.
+    4. in chuỗi ngược lại.
+*/
