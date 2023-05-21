@@ -7,7 +7,7 @@
 #include <string>
 
 using namespace std;
-
+/*Class Person*/
 class Person {
 private:
     string name;
@@ -19,12 +19,25 @@ public:
     void printInfo();
 };
 
+/*
+* Class: Persion
+* Description: The constructor implementation for the Animal class
+*/
 Person::Person(const string& name, int age, const string& address) {
     this->name = name;
     this->age = age;
     this->address = address;
 }
 
+/*
+* Class: Persion
+* Function: printInfo
+* Description: This function use for print information of Persion
+* Input:
+*   Don't have input parameters
+* Output:
+*   Print: Nanme, Age, Address
+*/
 void Person::printInfo() {
     cout << "Name: " << name << endl;
     cout << "Age: " << age << endl;
