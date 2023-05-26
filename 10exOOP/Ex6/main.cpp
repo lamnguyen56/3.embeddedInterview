@@ -8,6 +8,7 @@
 #include <iostream>
 using namespace std;
 
+/*Class Peaction*/
 class Praction {
 private:
     int numerator;
@@ -20,6 +21,7 @@ public:
     int getDenominator();
 };
 
+/*Class Calculate*/
 class Calculate : public Praction {
 public:
     Praction add(Praction p1, Praction p2);
@@ -28,23 +30,76 @@ public:
     Praction div(Praction p1, Praction p2);
 };
 
+/*
+* Class: Praction
+* Description: The constructor implementation for the Praction class
+*/
 Praction :: Praction(int num, int deno){
     this->numerator = num;
     this->denominator = deno;
 }
+
+/*
+* Class: Praction
+* Function: setNumerator
+* Description: This method set Numerator
+* Input:
+*   int num
+* Output:
+*   none
+*/
 void Praction :: setNumerator(int num){
     this->numerator = num;
 }
+
+/*
+* Class: Praction
+* Function: setDenominator
+* Description: This method set Denominator
+* Input:
+*   int deno
+* Output:
+*   none
+*/
 void Praction :: setDenominator(int deno){
     this->denominator = deno;
 }
+
+/*
+* Class: Praction
+* Function: getNumerator
+* Description: This method set Numerator
+* Input:
+*   none
+* Output:
+*   return numerator
+*/
 int Praction :: getNumerator(){
     return this->numerator;
 }
+
+/*
+* Class: Praction
+* Function: getDenominator
+* Description: This method set Denominator
+* Input:
+*   none
+* Output:
+*   return Denominator
+*/
 int Praction :: getDenominator(){
     return this->denominator;
 }
 
+/*
+* Class: Calculate
+* Function: add
+* Description: This method add both praction
+* Input:
+*   Praction p1, Praction p2
+* Output:
+*   return result
+*/
 Praction Calculate :: add(Praction p1, Praction p2) {
     Praction result;
     result.setNumerator(p1.getNumerator() * p2.getDenominator() + p2.getNumerator() * p1.getDenominator());
@@ -52,6 +107,15 @@ Praction Calculate :: add(Praction p1, Praction p2) {
     return result;
 }
 
+/*
+* Class: Calculate
+* Function: sub
+* Description: This method sub both praction
+* Input:
+*   Praction p1, Praction p2
+* Output:
+*   return result
+*/
 Praction Calculate :: sub(Praction p1, Praction p2) {
     Praction result;
     result.setNumerator(p1.getNumerator() * p2.getDenominator() - p2.getNumerator() * p1.getDenominator());
@@ -59,6 +123,15 @@ Praction Calculate :: sub(Praction p1, Praction p2) {
     return result;
 }
 
+/*
+* Class: Calculate
+* Function: multiplied
+* Description: This method multiplied both praction
+* Input:
+*   Praction p1, Praction p2
+* Output:
+*   return result
+*/
 Praction Calculate :: multiplied(Praction p1, Praction p2) {
     Praction result;
     result.setNumerator(p1.getNumerator() * p2.getNumerator());
@@ -66,6 +139,15 @@ Praction Calculate :: multiplied(Praction p1, Praction p2) {
     return result;
 }
 
+/*
+* Class: Calculate
+* Function: div
+* Description: This method divison both praction
+* Input:
+*   Praction p1, Praction p2
+* Output:
+*   return result
+*/
 Praction Calculate :: div(Praction p1, Praction p2) {
     Praction result;
     result.setNumerator(p1.getNumerator() * p2.getDenominator());

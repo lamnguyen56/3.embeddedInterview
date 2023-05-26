@@ -10,6 +10,7 @@
 
 using namespace std;
 
+/*Class Date*/
 class Date {
 private:
     int day;
@@ -24,29 +25,71 @@ public:
     void calculateHoliday();
 };
 
+/*Class Person*/
 class Person : public Date {
 public:
     Person(int day, int month, int year) : Date(day, month, year) {}
     void calculateAge();
 };
 
+/*
+* Class: Date
+* Description: The constructor implementation for the Date class
+*/
 Date::Date(int day, int month, int year) {
     this->day = day;
     this->month = month;
     this->year = year;
 }
 
+/*
+* Class: Date
+* Function: getDay
+* Description: This method get the day
+* Input:
+*   none
+* Output:
+*   return day
+*/
 int Date::getDay() const {
     return day;
 }
 
+/*
+* Class: Date
+* Function: getMonth
+* Description: This method get month
+* Input:
+*   none
+* Output:
+*   return month
+*/
 int Date::getMonth() const {
     return month;
 }
+
+/*
+* Class: Date
+* Function: getYear
+* Description: This method get year
+* Input:
+*   none
+* Output:
+*   return year
+*/
 int Date::getYear() const {
     return year;
 }
 
+/*
+* Class: Date
+* Function: calculateHoliday
+* Description: This method calculate hoilday
+* Input:
+*   none
+* Output:
+*   calculate holiday and print
+*/
 void Date::calculateHoliday() {
     if ((this->month == 1 && this->day == 1) || (this->day == 30 && this->month == 4)) {
         cout << "Date: " << getDay() << "/" << getMonth() << " is a holiday" << endl;
@@ -55,6 +98,15 @@ void Date::calculateHoliday() {
     }
 }
 
+/*
+* Class: Person
+* Function: calculateAge
+* Description: This method calculate Age
+* Input:
+*   none
+* Output:
+*   return age of person
+*/
 void Person::calculateAge() {
     // Lấy ngày, tháng, năm hiện tại
     time_t now = time(0);

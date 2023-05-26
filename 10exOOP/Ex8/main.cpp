@@ -2,17 +2,14 @@
  * @author Lam Nguyen
  * @email nguyenthualam1@gmail.com
  * @create date 2023-05-22
- * @desc [description]
+ * @desc [Account Bank]
  */
 
 #include <iostream>
 
-/*
-Tạo một lớp tài khoản ngân hàng với các thuộc tính số tài khoản, tên tài
- khoản và  số dư, và các phương thức để rút, nộp tiền và kiểm tra số dư trong tài khoản.
-*/
 using namespace std;
 
+/*Class Accountbank*/
 class AccountBank{
     private: 
         uint16_t accountNumber;
@@ -25,22 +22,53 @@ class AccountBank{
         void checkBalance();
 };
 
+/*
+* Class: AccountBank
+* Description: The constructor implementation for the AccountBank class
+*/
 AccountBank :: AccountBank(string accName, uint16_t accNum, uint16_t accBal){
     this->accountName = accName;
     this->accountBalance = accBal;
     this->accountNumber = accNum;
 }
 
+/*
+* Class: AccountBank
+* Function: withdrawMoney
+* Description: This method with drarw money
+* Input:
+*   money
+* Output:
+*   
+*/
 void AccountBank :: withdrawMoney(uint16_t money){
     this->accountBalance = this->accountBalance - money;
     cout << "You have withdrawn " << "$" << money << endl;
 }
 
+/*
+* Class: AccountBank
+* Function: depositMoney
+* Description: This method deposit money
+* Input:
+*   money
+* Output:
+*   
+*/
 void AccountBank :: depositMoney(uint16_t money){
     this->accountBalance = this->accountBalance + money;
     cout << "You have deposited $" << money << " into your account " << endl;
 }
 
+/*
+* Class: AccountBank
+* Function: checkBalance
+* Description: This method check Balance
+* Input:
+*   None
+* Output:
+*   None
+*/
 void AccountBank :: checkBalance(){
     cout << this->accountName <<  " Balance: " << this->accountBalance << endl;
 }

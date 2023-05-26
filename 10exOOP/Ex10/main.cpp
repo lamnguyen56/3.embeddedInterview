@@ -1,8 +1,16 @@
+/**
+ * @author Lam Nguyen
+ * @email nguyenthualam1@gmail.com
+ * @create date 2023-05-20
+ * @desc [Book Store]
+ */
 #include <iostream>
 #include <string>
 
 using namespace std;
 
+
+/*Class Book*/
 class Book {
 private:
     string title;
@@ -18,6 +26,10 @@ public:
     void returnBook();
 };
 
+/*
+* Class: Book
+* Description: The constructor implementation for the Book class
+*/
 Book::Book(string title, string author, int year, int quantity) {
     this->title = title;
     this->author = author;
@@ -25,6 +37,15 @@ Book::Book(string title, string author, int year, int quantity) {
     this->quantity = quantity;
 }
 
+/*
+* Class: Book
+* Function: displayInfo
+* Description: This method display Information
+* Input:
+*   no input
+* Output:
+*   None
+*/
 void Book::displayInfo() {
     cout << "Book Information:" << endl;
     cout << "Title: " << title << endl;
@@ -33,6 +54,15 @@ void Book::displayInfo() {
     cout << "Quantity: " << quantity << endl;
 }
 
+/*
+* Class: Book
+* Function: borrow
+* Description: This method borrow book
+* Input:
+*   no input
+* Output:
+*   None
+*/
 void Book::borrow() {
     if (quantity > 0) {
         quantity--;
@@ -42,6 +72,15 @@ void Book::borrow() {
     }
 }
 
+/*
+* Class: Book
+* Function: displayInfo
+* Description: This method return book
+* Input:
+*   no input
+* Output:
+*   None
+*/
 void Book::returnBook() {
     quantity++;
     cout << "Book returned successfully." << endl;
